@@ -128,42 +128,6 @@ LoRA 트리거 주입과 통합 prefix 관리를 위한 ComfyUI 텍스트 유틸
 ### 필수
 - ComfyUI (최신 버전 권장)
 - Python 3.8+
-- `folder_paths` 모듈 (ComfyUI에 내장됨)
-
-### 선택적
-- **ed_betterCombos.js**: 이미지 미리보기가 있는 향상된 LoRA 선택 (ComfyUI 설치에 있는 경우)
-
-## 🚧 개발
-
-개발 의존성과 pre-commit을 설치하려면 (ruff 훅이 실행됨):
-
-```bash
-cd ComfyUI-NoelTextUtil
-pip install -e .[dev]
-pre-commit install
-```
-
-위의 `-e` 플래그는 "라이브" 설치를 의미하며, 노드 확장에 대한 변경사항이 ComfyUI를 다시 실행할 때마다 자동으로 반영됩니다.
-
-## 🧪 테스트
-
-이 저장소는 `tests/` 디렉토리에 Pytest로 작성된 단위 테스트를 포함합니다. 커스텀 노드에 대한 단위 테스트를 작성하는 것이 권장됩니다.
-
-- [build-pipeline.yml](.github/workflows/build-pipeline.yml)은 모든 열린 PR에서 pytest와 linter를 실행합니다
-- [validate.yml](.github/workflows/validate.yml)은 [node-diff](https://github.com/Comfy-Org/node-diff)를 실행하여 호환성 문제를 확인합니다
-
-## 📦 레지스트리에 게시
-
-이 커스텀 노드를 커뮤니티의 다른 사람들과 공유하고 싶다면 레지스트리에 게시할 수 있습니다. `pyproject.toml`의 `tool.comfy` 아래에 일부 필드를 자동으로 채워넣었지만, 올바른지 다시 한 번 확인해 주세요.
-
-https://registry.comfy.org에서 계정을 만들고 API 키 토큰을 생성해야 합니다.
-
-- [ ] [레지스트리](https://registry.comfy.org)로 이동하세요. 로그인하고 게시자 ID를 생성하세요 (레지스트리 프로필의 `@` 기호 뒤에 있는 모든 것).
-- [ ] 게시자 ID를 pyproject.toml 파일에 추가하세요.
-- [ ] Github에서 게시하기 위한 레지스트리 API 키를 생성하세요. [지침](https://docs.comfy.org/registry/publishing#create-an-api-key-for-publishing).
-- [ ] Github 저장소 시크릿에 `REGISTRY_ACCESS_TOKEN`으로 추가하세요.
-
-Github 액션이 모든 git push에서 실행됩니다. Github 액션을 수동으로 실행할 수도 있습니다. 전체 지침은 [여기](https://docs.comfy.org/registry/publishing)에 있습니다. 질문이 있으면 [discord](https://discord.com/invite/comfyorg)에 참여하세요!
 
 ## 🤝 기여
 
@@ -177,19 +141,11 @@ Github 액션이 모든 git push에서 실행됩니다. Github 액션을 수동�
 
 ## 📄 라이선스
 
-이 프로젝트는 MIT 라이선스 하에 제공됩니다 - 자세한 내용은 [LICENSE](LICENSE) 파일을 참조하세요.
-
-## 🙏 감사의 말
-
-- **ComfyUI 팀**: 훌륭한 프레임워크와 확장 시스템을 제공해 주셔서
-- **Cookiecutter 템플릿**: 프로젝트 스캐폴딩을 제공해 주셔서
-- **커뮤니티**: 피드백과 테스트를 제공해 주셔서
+이 프로젝트는 GPL-3.0 License 라이선스 하에 제공됩니다 - 자세한 내용은 [LICENSE](LICENSE) 파일을 참조하세요.
 
 ## 📞 지원
 
 - **이슈**: 버그 보고와 기능 요청을 위해 GitHub Issues를 사용하세요
-- **토론**: 커뮤니티 지원을 위해 [ComfyUI Discord](https://discord.com/invite/comfyorg)에 참여하세요
-- **문서**: 일반적인 가이드라인을 위해 [ComfyUI 문서](https://docs.comfy.org/)를 확인하세요
 
 ---
 
